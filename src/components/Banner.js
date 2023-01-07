@@ -1,18 +1,27 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
+import { Profile_pic } from "./Profile_pic";
+import { Orbit } from "./Orbit";
+import { Bounce } from "./Bounce";
+import Card from "./Card";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import pfp8 from '../assets/img/pfp8.jpg';
+import Picker from 'emoji-picker-react';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Web Developer", "Software Developer" ];
+    const toRotate = [ "Web Developer", "Software Developer", "Gym Enthusiast", "Traveller" ];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(200);
     const period = 1000;
     const [index, setIndex] = useState(1);
+    const [show, setShow] = useState(false);
     useEffect(() => {
         let ticker = setInterval(() => {
           tick();
@@ -45,29 +54,51 @@ export const Banner = () => {
           setIndex(prevIndex => prevIndex + 1);
         }
       }
+      const handleClose = () => {
+        setShow(false)
+      }
+      const handleOpen = () => {
+        setShow(true)
+      }
     return (
         <section className="banner" id="home">
             <Container>
                 <Row className="aligh-items-center">
-                    <Col xs={12} md={6} xl={7}>
+                    <Col xs={12} md={10} xl={10}>
                     <TrackVisibility>
                       {({ isVisible }) =>
-                      <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`Hello! I'm Justin. A passionate `} 
-                        <span className="txt-rotate" dataPeriod="1000" 
-                        data-rotate='[ "Web Developer", "Software Developer" ]'><span className="wrap">{text}</span>
-                        </span></h1>
-                        <p>About Me </p>
-                        <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-                      </div>}
-                    </TrackVisibility>
+                        <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                          <span className="tagline">Welcome to my Portfolio</span>
+                          <h1>{"Hello! I'm Justin! A very passionate " } 
+                          <span className="txt-rotate" dataPeriod="1000" 
+                          data-rotate='[ "Web Developer", "Software Developer" ]'><span className="wrap">{text}</span>
+                          </span></h1>
+                          <p id="about" onClick={() => handleOpen()}>About Me </p>
+                        
+                          <Modal show={show} onHide={handleClose} id="modal" >
+                            <div style={{backgroundColor: "#151515"}}>
+                              <Modal.Body >
+                              <center>
+                                <img src={pfp8} alt="Image" style={{width: "50%", marginBottom:"5%"}}/>
+                                <p>I am fourth year student completing a double major in Computer Science and Statistics at the University of Toronto Scarborough. 
+                                  I have professional experience as a Full Stack Developer in the Government, and have done multiple software development projects
+                                  on the side for both education purposes and as a hobby. 
+                                  Feel free to reach out to me by clicking the "Let's Connect" button and filling out the form!</p>
+                                
+                                  <Button variant="secondary" onClick={handleClose}>
+                                      Close
+                                  </Button>
+                                </center>
+                              </Modal.Body>
+                            </div>
+                          </Modal>
+                        </div>}
+                      </TrackVisibility>
                     </Col>
-                
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img"/>    
-                    </Col>
-
+                  
+                </Row>
+                <Row>
+                <Profile_pic />
                 </Row>
             </Container>
             </section>

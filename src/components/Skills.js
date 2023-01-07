@@ -1,14 +1,36 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import website from "../assets/img/website.png";
+import OOP from "../assets/img/OOP.png";
+import framework from "../assets/img/framework.png";
+import tools from "../assets/img/tools.png";
+import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 import { Container, Row, Col } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import Button from 'react-bootstrap/Button';
+import background from '../assets/img/background1.jpg'
 
 export const Skills = () => {
+  const OOP_skills = [ "Java", "Python", "C/C++", "MATLAB", "R"]
+  const web = ["HTML/CSS", "JavaScript", "SQL", "Neo4j", "MongoDB"]
+  const frame = [ "Python Flask", "SharePoint", "jQuery", "React.js", "Bootstrap", "Node.js", "Ajax"]
+  const tool = ["Git", "JIRA", "SVN", "Linux", "Visual Studio Code", "Docker Desktop", "IntelliJ"]
+  const [info, setInfo] = useState([])
+  const [show, setShow] = useState(false);
+  const [skill, setSkill] = useState("")
+  useEffect(()=>{
+
+    setInfo(info)
+    if (info.length > 0){
+      setShow(true)
+    }
+  },[info])
+  const handleClose = () => {
+    setShow(false)
+  }
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -35,31 +57,44 @@ export const Skills = () => {
                     <Col>
                         <div className="skill-bx wow zoomIn">
                             <h2>Skills</h2><p>Skills</p>
-                            <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                                <div className="item">
-                                    <img src={meter1} alt="Image" />
+                            <Carousel  responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                                <div className="item" onClick={() => setInfo(web)}>
+                                    <img src={website} alt="Image" />
                                     <h5>Web Development</h5>
+                                    
                                 </div>
-                                <div className="item">
-                                    <img src={meter2} alt="Image" />
-                                    <h5>Brand Identity</h5>
+                                <div className="item" onClick={() => setInfo(OOP_skills)}>
+                                    <img src={OOP} alt="Image" />
+                                    <h5>Object Oriented Programming</h5>
                                 </div>
-                                <div className="item">
-                                    <img src={meter3} alt="Image" />
-                                    <h5>Logo Design</h5>
+                                <div className="item" onClick={() =>setInfo(frame)}>
+                                    <img src={framework} alt="Image" />
+                                    <h5>Frameworks/Libraries</h5>
                                 </div>
-                                <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
-                                </div>
-                            </Carousel>
+                                <div className="item" onClick={() => setInfo(tool)}>
+                                    <img src={tools} alt="Image" />
+                                    <h5>Developer Tools</h5>
+                                </div>     
+                            </Carousel>                    
                         </div>
-
                     </Col>
                 </Row>
+                <Modal show={show} onHide={handleClose} id="modal" >
+                  <div style={{backgroundColor: "#150c25"}}>
+                    <Modal.Body >
+                      {info.length > 0 && info.map((item) => <p>{item}</p>)}
+                      <Button variant="secondary" onClick={handleClose}>
+                          Close
+                        </Button>
+                    </Modal.Body>
+                </div>
+            </Modal>
             </Container>
+            
             <img className="background-image-left" src={colorSharp} alt="Image" />
+            
         </section>
+        
 
       )
 }
