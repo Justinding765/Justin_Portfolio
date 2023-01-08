@@ -147,7 +147,10 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                    </Tab.Pane>
+                      
+                    </Tab.Pane >
+                    <Tab.Pane eventKey="third">
+
                     <Row>
                       <center>
                         <p> A Mock Command Terminal written in Java.
@@ -170,6 +173,7 @@ export const Projects = () => {
                           })
                         }
                       </Row>
+                      </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
                 </Col>

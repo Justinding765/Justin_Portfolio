@@ -16,43 +16,43 @@ export const Profile_pic = () => {
     {
       key: uuidv4(),
       content: (
-        <Card imagen={pfp}/>
+        <Card imagen={pfp} content={"At Mount Royal Montreal"}/>
       )
     },
     {
       key: uuidv4(),
       content: (
-        <Card imagen={pfp2}/>
+        <Card imagen={pfp2} content={"One of my friends get an internship at HubSpot in Cambridge, Massachusetts, so we decided to pay him a visit"}/>
       )
     },
     {
       key: uuidv4(),
       content: (
-        <Card imagen={pfp3}/>
+        <Card imagen={pfp3} content={"A very good meal I had on the Boston Pier"}/>
       )
     },
     {
       key: uuidv4(),
       content: (
-        <Card imagen={pfp4}/>
+        <Card imagen={pfp4} content={"Ramen!"}/>
       )
     },
     {
       key: uuidv4(),
       content: (
-        <Card imagen={pfp5}/>
+        <Card imagen={pfp5} content={"Dont really have a good picture of working out, so I used this emote"}/>
       )
     },
     {
       key: uuidv4(),
       content: (
-        <Card imagen={pfp6}/>
+        <Card imagen={pfp6} content={"A beautiful picture of the city of Boston taken during a bike ride"}/>
       )
     },
     {
       key: uuidv4(),
       content: (
-        <Card imagen={pfp7}/>
+        <Card imagen={pfp7} content={"Chilling in a random store after a long walk in Montreal"}/>
       )
     },
   ];

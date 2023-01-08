@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-function Card({ imagen }) {
+function Card({ imagen , content}) {
   const [show, setShown] = useState(false);
 
   const props3 = useSpring({
@@ -18,13 +18,12 @@ function Card({ imagen }) {
       onMouseEnter={() => setShown(true)}
       onMouseLeave={() => setShown(false)}
     > 
-    <center><img src={imagen} alt="" /></center>
+    <center><img src={imagen} alt="" />
       
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.
+      {content}
       </p>
+     </center>
     </animated.div>
   );
 }
