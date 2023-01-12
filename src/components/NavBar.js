@@ -5,6 +5,10 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/nav-icon4.png';
+import navIcon5 from '../assets/img/nav-icon5.png';
+import navIcon6 from '../assets/img/nav-icon6.png';
+import PDF from '../assets/img/Justin_Ding_Resume.pdf';
+
 import { HashLink } from 'react-router-hash-link';
 
 import {
@@ -49,8 +53,10 @@ export const NavBar = () => {
                 </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/justin-ding-b332091b1/" target="_blank"><img src={navIcon1} alt="linkden" /></a>
-                            { <a  href="https://github.com/Justinding765" className="git" target="_blank"><img  id = "git2" src={navIcon4} alt="Github" /></a> }
+                            <a href="https://www.linkedin.com/in/justin-ding-b332091b1/" target="_blank"><img src={navIcon6} alt="linkden" /></a>
+                             <a  href="https://github.com/Justinding765" className="git" target="_blank"><img  id = "git2" src={navIcon4} alt="Github" /></a> 
+                             <a id="Resume_link" href={PDF} target="_blank"  without rel="noopener noreferrer"><img id = "Resume" src={navIcon5} alt="linkden" /></a>
+
                         </div>
                         <button className="vvd"  onClick={event =>  window.location.href='#connect'}><span>Let’s Connect</span></button>
                     </span>
