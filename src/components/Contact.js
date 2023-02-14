@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import {PopupActions, DialogType} from "react-custom-popup";
 
 //import 'animate.css';
 //import TrackVisibility from 'react-on-screen';

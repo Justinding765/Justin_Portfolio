@@ -46,7 +46,7 @@ export const Projects = () => {
         },
         {
           title: "Friends Feature",
-          description: "Users can add/delete friends and have in 1 on 1 chats with them",
+          description: "Users can add/delete friends and have 1 on 1 chats with them",
           imgUrl: projImg5,
         },
     ], [{

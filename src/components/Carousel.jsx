@@ -10,7 +10,6 @@ export default function Carroussel(props) {
     useEffect(
         () => {
             setSlide((slide_num+ 1))
-            console.log(slide_num % size)
             handleSubmit()
             const id = setInterval(timer,4000);
             return () => clearInterval(id);

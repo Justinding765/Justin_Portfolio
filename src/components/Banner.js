@@ -1,17 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
 import { Profile_pic } from "./Profile_pic";
-import { Orbit } from "./Orbit";
-import { Bounce } from "./Bounce";
-import Card from "./Card";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import pfp8 from '../assets/img/pfp8.jpg';
-import Picker from 'emoji-picker-react';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -20,13 +14,12 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(200);
     const period = 1000;
-    const [index, setIndex] = useState(1);
     const [show, setShow] = useState(false);
     useEffect(() => {
         let ticker = setInterval(() => {
           tick();
         }, delta);
-    
+
         return () => { clearInterval(ticker) };
       }, [text])
 
@@ -43,15 +36,12 @@ export const Banner = () => {
     
         if (!isDeleting && updatedText === fullText) {
           setIsDeleting(true);
-          setIndex(prevIndex => prevIndex - 1);
           setDelta(period);
         } else if (isDeleting && updatedText === '') {
           setIsDeleting(false);
           setLoopNum(loopNum + 1);
-          setIndex(1);
           setDelta(200);
         } else {
-          setIndex(prevIndex => prevIndex + 1);
         }
       }
       const handleClose = () => {
@@ -70,8 +60,7 @@ export const Banner = () => {
                         <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                           <span className="tagline">Welcome to my Portfolio</span>
                           <h1>{"Hello! I'm Justin! A very passionate " } 
-                          <span className="txt-rotate" dataPeriod="1000" 
-                          data-rotate='[ "Web Developer", "Software Developer" ]'><span className="wrap">{text}</span>
+                          <span className="txt-rotate" ><span className="wrap">{text}</span>
                           </span></h1>
                           <p id="about" onClick={() => handleOpen()}>About Me </p>
                         
@@ -82,7 +71,7 @@ export const Banner = () => {
                                 <img src={pfp8} alt="Image" style={{width: "50%", marginBottom:"5%"}}/>
                                 <p>I am fourth year student completing a double major in Computer Science and Statistics at the University of Toronto Scarborough. 
                                   I have professional experience as a Full Stack Developer in the Government, and have done multiple software development projects
-                                  on the side for both education purposes and as a hobby. 
+                                  on the side for both educational purposes and as a hobby. 
                                   Feel free to reach out to me by clicking the "Let's Connect" button and filling out the form!</p>
                                 
                                   <Button variant="secondary" onClick={handleClose}>
