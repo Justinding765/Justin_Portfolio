@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Justin_Portfolio/static/css/main.ddd8bc59.css",
-    "main.js": "/Justin_Portfolio/static/js/main.1516bca8.js",
+    "main.css": "/Justin_Portfolio/static/css/main.ded6a235.css",
+    "main.js": "/Justin_Portfolio/static/js/main.bead2308.js",
     "static/js/787.28cb0dcd.chunk.js": "/Justin_Portfolio/static/js/787.28cb0dcd.chunk.js",
     "static/media/pfp.jpg": "/Justin_Portfolio/static/media/pfp.92d7dbe87e4b2e9d6729.jpg",
     "static/media/pfp4.png": "/Justin_Portfolio/static/media/pfp4.7116e018ce85b3a6050c.png",
@@ -16,9 +16,9 @@
     "static/media/Instructor_Student Website-icon3.png": "/Justin_Portfolio/static/media/Instructor_Student Website-icon3.9bd8010726a6cdc5ea9a.png",
     "static/media/Instructor_Student Website-icon4.png": "/Justin_Portfolio/static/media/Instructor_Student Website-icon4.e5854d365c805811c37e.png",
     "static/media/Instructor_Student Website-icon2.png": "/Justin_Portfolio/static/media/Instructor_Student Website-icon2.d49a46bc21557df819d7.png",
-    "static/media/Justin_Ding_Resume.pdf": "/Justin_Portfolio/static/media/Justin_Ding_Resume.40f9abd16d6d53bfa679.pdf",
     "static/media/website.png": "/Justin_Portfolio/static/media/website.ebb023c83f84a3fec0c1.png",
     "static/media/pfp3.jpg": "/Justin_Portfolio/static/media/pfp3.57174432402946e3656b.jpg",
+    "static/media/Justin_Ding_Resume.pdf": "/Justin_Portfolio/static/media/Justin_Ding_Resume.aafc56c911d674f33c06.pdf",
     "static/media/dropin-icon5.png": "/Justin_Portfolio/static/media/dropin-icon5.f500b42e94c6b2d780a3.png",
     "static/media/dropin-icon2.png": "/Justin_Portfolio/static/media/dropin-icon2.3475398280e864bdaee8.png",
     "static/media/flask-icon.png": "/Justin_Portfolio/static/media/flask-icon.5e8d4f33978401783e7d.png",
@@ -37,7 +37,7 @@
     "static/media/footer-bg.png": "/Justin_Portfolio/static/media/footer-bg.7bd67c0f73571d0acc02.png",
     "static/media/dropin-icon6.png": "/Justin_Portfolio/static/media/dropin-icon6.9797dcc5d2718dafa9ca.png",
     "static/media/Instructor_Student Website-icon1.png": "/Justin_Portfolio/static/media/Instructor_Student Website-icon1.d12128b1d2d61e9e249e.png",
-    "static/media/contact-img.svg": "/Justin_Portfolio/static/media/contact-img.87eac2b29352fa01abb2f9510ef6ac7e.svg",
+    "static/media/contact-img.svg": "/Justin_Portfolio/static/media/contact-img.62aa99e0f3b968b5d1ce9eb047f34fc7.svg",
     "static/media/vs-icon.png": "/Justin_Portfolio/static/media/vs-icon.5bed3d18293777c60081.png",
     "static/media/nav-icon4.png": "/Justin_Portfolio/static/media/nav-icon4.c4e2b031d0df1bdd64d7.png",
     "static/media/sql-icon.png": "/Justin_Portfolio/static/media/sql-icon.d9bee42d77e0a42001f5.png",
@@ -53,14 +53,14 @@
     "static/media/revicons.woff": "/Justin_Portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/logo.svg": "/Justin_Portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Justin_Portfolio/index.html",
-    "static/media/arrow2.svg": "/Justin_Portfolio/static/media/arrow2.3d9522b6fd8f2464b7200ebf2c1bb09a.svg",
-    "static/media/arrow1.svg": "/Justin_Portfolio/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
-    "main.ddd8bc59.css.map": "/Justin_Portfolio/static/css/main.ddd8bc59.css.map",
-    "main.1516bca8.js.map": "/Justin_Portfolio/static/js/main.1516bca8.js.map",
+    "static/media/arrow2.svg": "/Justin_Portfolio/static/media/arrow2.b3d03e1b04ec1904a5658aea5776433c.svg",
+    "static/media/arrow1.svg": "/Justin_Portfolio/static/media/arrow1.1088f8313e5637897aff2414e5938141.svg",
+    "main.ded6a235.css.map": "/Justin_Portfolio/static/css/main.ded6a235.css.map",
+    "main.bead2308.js.map": "/Justin_Portfolio/static/js/main.bead2308.js.map",
     "787.28cb0dcd.chunk.js.map": "/Justin_Portfolio/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddd8bc59.css",
-    "static/js/main.1516bca8.js"
+    "static/css/main.ded6a235.css",
+    "static/js/main.bead2308.js"
   ]
 }
